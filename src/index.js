@@ -1,12 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
+function Comment(props) {
+    return (
+        <div>
+            <form action="#">
+                <label>账号：</label>
+                <input type="text"/>
+                <label>密码：</label>
+                <input type="password"/>
+                <button type="sumbit">登录</button>
+                <button>注册</button>
+            </form>
+
+        </div>
+    )
+}
+
+
+ReactDOM.render(
+    <Comment
+
+    />,
+    document.getElementById('root')
+);
+
 serviceWorker.unregister();
